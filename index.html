@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex JS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <h1 class="title">Poké<span>dex</span></h1>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Nome ou ID (ex: pikachu)" autocomplete="off">
+            <button id="search-btn">Buscar</button>
+        </div>
+
+        <div id="pokemon-card" class="card" style="display: none;">
+            <div class="pokemon-header">
+                <span class="hp-tag">HP <span id="hp-val">0</span></span>
+            </div>
+
+            <div class="img-container">
+                <img id="pokemon-img" src="" alt="Pokemon Image">
+            </div>
+
+            <h2 id="pokemon-name">Nome</h2>
+            <p class="pokemon-id">#<span id="pokemon-id">000</span></p>
+
+            <div class="types-container" id="types-container">
+            </div>
+
+            <div class="stats-container">
+                <div class="stat">
+                    <h3>Ataque</h3>
+                    <p id="attack-val">0</p>
+                </div>
+                <div class="stat">
+                    <h3>Defesa</h3>
+                    <p id="defense-val">0</p>
+                </div>
+                <div class="stat">
+                    <h3>Veloc.</h3>
+                    <p id="speed-val">0</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="error-message" class="error" style="display: none;">
+            <p>Pokémon não encontrado! 😢</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
